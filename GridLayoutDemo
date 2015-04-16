@@ -1,0 +1,41 @@
+package gridLayout;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class GridLayoutDemo extends JFrame 
+{
+	JButton button1 = new JButton("Button 1");
+	JButton button2 = new JButton("Button 2");
+	JButton button3 = new JButton("Button 3");
+	JButton button4 = new JButton("Button 4");
+	JButton button5 = new JButton("Button 5");
+	JButton button6 = new JButton("Button 6");
+	JPanel controlPanel = new JPanel();
+	JPanel panel1 = new JPanel();
+	JPanel panel2 = new JPanel();
+
+	public static void main(String[] args) 
+	{
+		GridLayoutDemo button = new GridLayoutDemo();
+		button.setVisible(true);
+	}
+	public GridLayoutDemo() 
+	{
+		panel1.setLayout(new GridLayout(2,2)); 
+		panel2.setLayout(new GridLayout(2,2));
+
+		panel1.add(button1);
+		panel1.add(button2);
+		panel1.add(button3);
+
+		panel2.add(button4);
+		panel2.add(button5);
+		panel2.add(button6);
+
+		add(panel1, BorderLayout.SOUTH);
+		add(panel2, BorderLayout.CENTER);
+		setVisible(true);
+		pack();
+	}
+}
